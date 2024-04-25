@@ -167,7 +167,8 @@ jobs:
         SKIP_TESTS: ${{ needs.matrix-variables.outputs.skip_tests }}
     steps:
     - run: |
-        echo "foo" > foo.txt
+        mkdir tests
+        echo "foo" > tests/cata_test
       if: ${{ always() }}
     - uses: actions/upload-artifact@v4
       if: ${{ always() }}
